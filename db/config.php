@@ -72,12 +72,7 @@ try {
             3
         );
     
-    -- INSERT INTO
-    --     users (name, email, password)
-    -- values
-    --     ('admin', 'admin@email.com', 'hemligt123');
-
-    
+        
     INSERT INTO
         signups (event_id, sname, semail)
     values

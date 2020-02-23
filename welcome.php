@@ -24,5 +24,5 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <h1>Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to our site.</h1>
     </div>
     <p>
-        <a href="logout.php" class="btn">Sign Out of Your Account</a>
+        <a href="log-out.php" class="btn">Sign Out of Your Account</a>
     </p>

@@ -17,11 +17,13 @@
                     <label>text</label>
                     <textarea required class="form-control" name="content" placeholder="Skriv något här med va..." id="eventDescription" rows="7"></textarea>
                 </div>
+                <div class="form-group">
                 <select class="custom-select">
                     <?php foreach ($categories as $category) { ?>
                         <option value="<?php echo $category['id']; ?>"><?php echo $category['name']; ?></option>
                     <?php } ?>
                 </select>
+                </div>
                 <div class="form-group">
                     <input type="submit" class="btn btn-primary btn-block" value="Skicka">
                 </div>

@@ -9,6 +9,11 @@ try {
 } catch (PDOException $e) {
   die("ERROR: Could not able to execute $sql. " . $e->getMessage());
 }
+$loggedIn = false;
+session_start();
+if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
+  $loggedIn = true;
+}
 ?>
 
 <nav class="navbar navbar-expand navbar-expand-lg">
@@ -16,10 +21,8 @@ try {
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <ul class="navbar-nav mr-4">
@@ -34,9 +37,15 @@ try {
           </div>
         </li>
       </ul>
-      <a href="login.php">
-        <div class="btn btn-outline-primary my-2 my-sm-0">Login</div>
-      </a>
+      <?php if ($loggedIn) : ?>
+        <a href="log-out.php">
+          <div class="btn btn-outline-primary my-2 my-sm-0">Sign out</div>
+        </a>
+      <?php else : ?>
+        <a href="login.php">
+          <div class="btn btn-outline-primary my-2 my-sm-0">Login</div>
+        </a>
+      <?php endif; ?>
     </form>
   </div>
 </nav>

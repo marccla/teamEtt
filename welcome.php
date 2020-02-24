@@ -26,3 +26,5 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <p>
         <a href="log-out.php" class="btn">Sign Out of Your Account</a>
     </p>
+
+    <? include('templates/events-for-welcome.php'); ?>

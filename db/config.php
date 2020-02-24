@@ -13,11 +13,12 @@ try {
     
     USE event_db;
     
-    CREATE TABLE users ( 
+    CREATE TABLE users (
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-     username VARCHAR(50) NOT NULL UNIQUE,
-     password VARCHAR(255) NOT NULL, 
-     created_at DATETIME DEFAULT CURRENT_TIMESTAMP );
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
     
     CREATE TABLE categories (
         id INT AUTO_INCREMENT PRIMARY KEY,
@@ -71,12 +72,7 @@ try {
             3
         );
     
-    INSERT INTO
-        users (name, email, password)
-    values
-        ('admin', 'admin@email.com', 'hemligt123');
-
-    
+        
     INSERT INTO
         signups (event_id, sname, semail)
     values

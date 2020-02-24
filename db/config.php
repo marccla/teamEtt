@@ -9,16 +9,15 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
    
    
-    $sql = "CREATE DATABASE event_db; 
+    $sql = "CREATE DATABASE IF NOT EXISTS event_db; 
     
     USE event_db;
     
-    CREATE TABLE users (
-        id INT AUTO_INCREMENT PRIMARY KEY,
-        email VARCHAR (254) NOT NULL,
-        name VARCHAR (100) NOT NULL,
-        password VARCHAR (100)
-    ) ENGINE = INNODB;
+    CREATE TABLE users ( 
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+     username VARCHAR(50) NOT NULL UNIQUE,
+     password VARCHAR(255) NOT NULL, 
+     created_at DATETIME DEFAULT CURRENT_TIMESTAMP );
     
     CREATE TABLE categories (
         id INT AUTO_INCREMENT PRIMARY KEY,
@@ -108,5 +107,5 @@ catch(PDOException $e)
     echo $sql . "<br>" . $e->getMessage();
     }
 
-$conn = null;
+
 ?>

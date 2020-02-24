@@ -1,0 +1,20 @@
+body {
+  background-color: #FFF4E8!important;
+}
+
+nav {
+  background: #CFF2FF!important;
+}
+* {
+  color: #3D4849!important;
+}
+
+.btn-outline-primary {
+  color: #6DA0B3!important;
+  border-color: #B3997F!important;
+}
+
+.btn-outline-primary:hover {
+  background-color: #6DA0B3!important;
+  color: white!important;
+}

@@ -9,7 +9,7 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
    
    
-    $sql = "CREATE DATABASE event_db; 
+    $sql = "CREATE DATABASE IF NOT EXISTS event_db; 
     
     USE event_db;
     
@@ -107,6 +107,4 @@ catch(PDOException $e)
     {
     echo $sql . "<br>" . $e->getMessage();
     }
-
-$conn = null;
 ?>

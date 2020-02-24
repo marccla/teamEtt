@@ -6,7 +6,7 @@
 //Looping each row in table as its own "article"
     foreach ($events as $event) {
      ?> 
- <div class="col-lg-3 col-6 col-12">
+ <div class="col-lg-3 col-md-6 col-12">
     <div class="card" style="width: 18rem;">
   <img src="<? echo $event['img_url'] ?>" class="card-img-top" alt="picture">
   <div class="card-body">

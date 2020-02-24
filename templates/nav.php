@@ -5,13 +5,12 @@ $categories = [];
 try {
   $sql = "SELECT * FROM categories";
   $result = $conn->query($sql);
-  while ($data = $result->fetch()) {
-    array_push($categories, $data);
-  }
+  $categories = $result->fetchAll(PDO::FETCH_ASSOC);
 } catch (PDOException $e) {
   die("ERROR: Could not able to execute $sql. " . $e->getMessage());
 }
 ?>
+
 <nav class="navbar navbar-expand navbar-expand-lg">
   <a class="navbar-brand" href="index.php">EventIcon</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

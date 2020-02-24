@@ -19,4 +19,5 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     </p>
 */?>
 
-    <? include('templates/events-for-welcome.php'); ?>
+<? include('templates/events-for-welcome.php'); ?>
+<? include('templates/footer.php'); ?>

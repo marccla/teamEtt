@@ -13,7 +13,7 @@
         <div class="col-12 col-lg-12 col-md-12 order-lg-1 order-md-1 order-1 mt-5">
             <img class="event-img" src="<? echo $event['img_url'] ?>">
         </div>
-        <div class="col-12 col-lg-6 col-md-6 order-lg-1 order-md-1 order-2 mt-5">
+        <div class="col-12 col-lg-6 col-md-6 order-lg-1 order-md-1 order-2 mt-4">
             <form action="templates/create-signup.php" method="post">
                 <h4>Kommer du på eventet?</h4> <br>
                 <label for="name">Namn</label> <br>
@@ -25,8 +25,8 @@
                 <button class="btn primary-btn btn-outline-primary" type="Submit">Skriv upp dig</button>
             </form>
         </div>
-        <div class="col-12 col-md-6 col-lg6 order-lg-2 order-md-2 order-1">
-            <h2>
+        <div class="col-12 col-md-6 col-lg6 order-lg-2 order-md-2 order-1 mt-3">
+            <h2 >
                 <? echo $event['title'] ?>
             </h2>
             <p>

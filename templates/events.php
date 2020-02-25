@@ -17,7 +17,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
         <div class="card" style="width: 18rem;">
           <img src="<? echo $event['img_url'] ?>" class="card-img-top" alt="picture">
           <div class="card-body">
-            <h5 class="card-title" style="color: #3D4849;"><? echo $event['title'] ?></h5>
+            <h5 class="card-title" style="color: #3D4849;"><? echo $event['title'] ?></h5><span class="badge badge-primary"><? echo $event['name'] ?></span>
             <p class="card-text"><? echo $event['text'] ?></p>
             <?php if ($loggedIn) : ?>
               <a href="#" class="btn btn-primary" style="background-color: #B3997F;">Edit</a>

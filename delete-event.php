@@ -15,7 +15,7 @@ if (isset($_GET['id'])) {
             }
         }
     } catch (PDOException $e) {
-        echo "Du kan just nu inte ta bort events med signups";
+        echo "<script type='text/javascript'>alert('Du kan inte ta bort ett event med deltagare');window.location.href='index.php';</script>";
     }
     // Close connection
     unset($conn);

@@ -38,6 +38,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
         </li>
       </ul>
       <?php if ($loggedIn) : ?>
+        <a href="#" class="btn btn-outline-primary my-2 my-sm-0" id="sentMessage" data-toggle="modal" data-target="#largeModal">Nytt event</a>
         <a href="log-out.php">
           <div class="btn btn-outline-primary my-2 my-sm-0">Sign out</div>
         </a>

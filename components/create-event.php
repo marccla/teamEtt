@@ -1,10 +1,4 @@
-<? 
-
-
-
-?>
-
-<div class="col-12 col-md-6 col-12">
+<div class="col-12 col-md-6 col-lg-6">
 
 <form>
   <div class="form-group">

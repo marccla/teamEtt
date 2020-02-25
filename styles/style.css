@@ -18,3 +18,6 @@ nav {
   background-color: #6DA0B3!important;
   color: white!important;
 }
+.event-img {
+  max-width: 90vw;
+}

@@ -21,7 +21,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
             <p class="card-text"><? echo $event['text'] ?></p>
             <?php if ($loggedIn) : ?>
               <a href="#" class="btn btn-primary" style="background-color: #B3997F;">Edit</a>
-              <a href="#" class="btn btn-secondary" style="width: 30% !important; height: 30% !imporant; background-color: #6DA0B3;">Delete</a>
+              <a href="delete-event.php?id=<?php echo $event['id'] ?>" class="btn btn-secondary" style="width: 30% !important; height: 30% !imporant; background-color: #6DA0B3;">Delete</a>
             <?php endif; ?>
           </div>
         </div>

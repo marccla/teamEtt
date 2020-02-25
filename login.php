@@ -112,7 +112,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <span class="help-block"><?php echo $password_err; ?></span>
             </div>
             <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Login">
+                <input type="submit" class="btn btn-outline-primary" value="Login">
             </div>
             <p>Har du inget konto?<a href="create-user.php">Skapa ett konto!</a>.</p>
         </form>

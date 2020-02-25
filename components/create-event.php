@@ -20,6 +20,7 @@
   <? 
   include('db/config.php');
   include('templates/get-categories.php');
+//   include('components/post-event.php');
   foreach ($categories as $category) { ?>
     <input type="radio" name="category_id" value="<?php echo $category['id']; ?>"> <?php echo $category['name']; ?> 
 <? } ?> 

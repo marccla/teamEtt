@@ -5,4 +5,5 @@ $sql = "SELECT * FROM events";
 $stmt = $conn->prepare($sql);
 $stmt->execute();
 $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$events = array_reverse($events);
 ?>

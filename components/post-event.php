@@ -17,8 +17,10 @@
         // Execute the prepared statement
         $stmt->execute();
         // echo "successsfull!";
+        
     } catch(PDOException $e){
-        die("ERROR: Could not able to execute $sql. " . $e->getMessage());
+        // die("ERROR: Could not able to execute $sql. " . $e->getMessage());
+       
     }
 
     // Close connection

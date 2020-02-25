@@ -24,7 +24,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <div class="row">
     <? 
     include('components/create-event.php'); 
-    include('templates/events-for-welcome.php'); 
+    include('templates/events-for-welcome.php');
+    include('components/post-event.php');
+
    ?>
    </div>
    </div>

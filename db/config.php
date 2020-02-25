@@ -9,9 +9,9 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
    
    
-    $sql = "CREATE DATABASE IF NOT EXISTS event_db; 
+    $sql = "CREATE DATABASE IF NOT EXISTS event_db2; 
     
-    USE event_db;
+    USE event_db2;
     
     CREATE TABLE users (
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -56,19 +56,19 @@ try {
         (
             'React 101',
             'Lära sig allt, alla är välkomna',
-            'https://www.bild.se/hej.png',
+            'https://image.shutterstock.com/image-illustration/tv-color-test-pattern-card-600w-61115026.jpg',
             1
         ),
         (
             'Dricka',
             'Dricka allt, alla är välkomna',
-            'https://www.bild.se/hej.png',
+            'https://image.shutterstock.com/image-illustration/tv-color-test-pattern-card-600w-61115026.jpg',
             2
         ),
         (
             'Hemligheter 101',
             'Hemlighåll allt, alla är välkomna',
-            'https://www.bild.se/hej.png',
+            'https://image.shutterstock.com/image-illustration/tv-color-test-pattern-card-600w-61115026.jpg',
             3
         );
     

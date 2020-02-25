@@ -1,4 +1,8 @@
-<?php
+
+
+<?
+include('templates/head.php');
+include('templates/nav.php');
 // Initialize the session
 session_start();
  
@@ -28,3 +32,5 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     </p>
 
     <? include('templates/events-for-welcome.php'); ?>
+
+    <? include('templates/footer.php'); ?>

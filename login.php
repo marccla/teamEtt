@@ -96,7 +96,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 ?>
 
 
-        <div class="container">
+        <div class="container mt-5">
         <div class="row">
         <div class="m-auto">
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
@@ -112,9 +112,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <span class="help-block"><?php echo $password_err; ?></span>
             </div>
             <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Login">
+                <input type="submit" class="btn btn-outline-primary" value="Login">
             </div>
-            <p>Don't have an account? <a href="create-user.php">Sign up now</a>.</p>
+            <p>Har du inget konto? <a href="create-user.php">Skapa ett här!</a></p>
         </form>
         </div>
         </div>

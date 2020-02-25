@@ -15,12 +15,12 @@ try{
     
     // Execute the prepared statement
     $stmt->execute();
-    echo "Records inserted successfully.";
+    header('Location: ../index.php'); // Want this to target itself, how?
+    // echo "successsfull!";
 } catch(PDOException $e){
     die("ERROR: Could not able to execute $sql. " . $e->getMessage());
 }
  
 // Close connection
 unset($conn);
-?>
 ?>

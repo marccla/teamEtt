@@ -101,9 +101,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 }
 ?>
 
-<div class="container">
+<div class="container mt-5">
 <div class="row">
-<div class="wrapper">
+<div class="m-auto">
+    
         <h2>Registrera konto</h2>
         
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
@@ -123,16 +124,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <span class="help-block"><?php echo $confirm_password_err; ?></span>
             </div>
             <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Submit">
-                <input type="reset" class="btn btn-default" value="Reset">
+                <input type="submit" class="btn btn-outline-primary" value="Submit">
+                <input type="reset" class="btn btn-outline-secondary" value="Reset">
             </div>
             <p>Har du redan ett konto? <a href="login.php">Logga in här!</a>.</p>
         </form>
-    </div>    
+      
 
 </div>
 </div>
-
+</div>
 
 
 

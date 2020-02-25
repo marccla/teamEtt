@@ -1,6 +1,6 @@
 <? require('get-events.php');?>
 
-<div class="container">
+<div class="container mt-5">
  <div class="row">
 <?
 // Looping each row in table as its own "article"

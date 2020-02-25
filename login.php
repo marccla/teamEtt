@@ -96,7 +96,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 ?>
 
 
-        <div class="container">
+        <div class="container mt-5">
         <div class="row">
         <div class="m-auto">
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
@@ -114,7 +114,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="form-group">
                 <input type="submit" class="btn btn-outline-primary" value="Login">
             </div>
+<<<<<<< HEAD
             <p>Har du inget konto?<a href="create-user.php">Skapa ett konto!</a>.</p>
+=======
+            <p>Har du inget konto? <a href="create-user.php">Skapa ett här!</a></p>
+>>>>>>> marc-feature-single
         </form>
         </div>
         </div>

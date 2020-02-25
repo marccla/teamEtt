@@ -29,6 +29,17 @@
                 <? echo $event['text'] ?>
             </p>
         </div>
+    <?
+    include('templates/get-signups.php');
+    foreach ($signups as $signup) { 
+     while($event['id'] == $signup['event_id']) {?>
+        <div class="col-12 col-lg-6 col-md-6">
+            <h4>Vi som kommer</h4>
+            <p><? echo $signup['sname']; ?></p>
+            <p><? echo $signup['semail']; ?></p>
+        </div>
+     <? break; }
+    } ?>
     </div>
 </div>
     <? break;  } 

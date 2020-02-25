@@ -72,10 +72,10 @@ foreach ($events as $event) {
     foreach ($signups as $signup) { 
         // we check that the signups event id is matching this events id
      while($event['id'] == $signup['event_id']) {?>
-        <div class="col-12 col-lg-12 col-md-12 order-lg-5 order-md-5 order-5">
+        <div class="signups col-12 col-lg-12 col-md-12 order-lg-5 order-md-5 order-5">
             
-            <p><? echo $signup['sname']; ?></p>
-            <p><? echo $signup['semail']; ?></p>
+            <p><? echo $signup['sname']; ?>, <? echo $signup['semail']; ?></p>
+            
         </div>
      <? break; } 
     } ?>

@@ -59,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <div class="form-group">
                         <label>Text</label>
                         <textarea required class="form-control" id="content" name="content" placeholder="Skriv något här med va..." id="eventDescription" rows="7"></textarea>
-                        <input class="d-no  " type="text" name="author" value="<? echo $users['username']?>" required></input>
+                        <input class="d-no  " type="text" name="author" value="<? echo $_GET['username']?>" required></input>
                     </div>
                     <div class="form-group">
                         <select class="custom-select" name="category">

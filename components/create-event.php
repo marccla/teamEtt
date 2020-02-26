@@ -12,7 +12,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bindParam(":category_id", $param_category_id, PDO::PARAM_STR);
         $stmt->bindParam(":author", $param_author, PDO::PARAM_STR);
 
-
         // Set parameters
         $param_title = trim($_POST["title"]);
         $param_text = trim($_POST["content"]);

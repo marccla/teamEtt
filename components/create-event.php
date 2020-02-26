@@ -1,7 +1,8 @@
 <?php
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Prepare an insert statement
-    $sql = "INSERT INTO events (title, text, img_url, category_id) VALUES (:title, :text, :img_url, :category_id)";
+    $sql = "INSERT INTO events (title, text, img_url, category_id, author) VALUES (:title, :text, :img_url, :category_id, :author)";
 
     if ($stmt = $conn->prepare($sql)) {
         // Bind variables to the prepared statement as parameters
@@ -9,12 +10,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bindParam(":text", $param_text, PDO::PARAM_STR);
         $stmt->bindParam(":img_url", $param_img_url, PDO::PARAM_STR);
         $stmt->bindParam(":category_id", $param_category_id, PDO::PARAM_STR);
+        $stmt->bindParam(":author", $param_author, PDO::PARAM_STR);
+        
 
         // Set parameters
         $param_title = trim($_POST["title"]);
         $param_text = trim($_POST["content"]);
         $param_img_url = trim($_POST["imgurl"]);
         $param_category_id = trim($_POST["category"]);
+        $param_author = trim($_POST["author"]);
 
         // Attempt to execute the prepared statement
         if ($stmt->execute()) {
@@ -50,9 +54,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <label>Länk till bild</label><input type="file" id="file" name="myFile">
                         <input type="text" id="imgurl" name="imgurl" placeholder="http://" class="form-control">
                     </div>
+                    <? require_once 'templates/get-users.php'; ?>
+                    <? require_once 'db/config.php'; ?>
                     <div class="form-group">
                         <label>Text</label>
                         <textarea required class="form-control" id="content" name="content" placeholder="Skriv något här med va..." id="eventDescription" rows="7"></textarea>
+                        <input class="d-none" type="text" name="author" value="<? echo $_SESSION['username']?>" required></input>
                     </div>
                     <div class="form-group">
                         <select class="custom-select" name="category">

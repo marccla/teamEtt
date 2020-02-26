@@ -15,7 +15,7 @@ try{
     
     // Execute the prepared statement
     $stmt->execute();
-    header('Location: ../index.php'); // Want this to target itself, how?
+    header("Location: ../single-post.php?id={$_POST['event_id']}");
     // echo "successsfull!";
 } catch(PDOException $e){
     die("ERROR: Could not able to execute $sql. " . $e->getMessage());

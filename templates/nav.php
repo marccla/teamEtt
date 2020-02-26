@@ -17,7 +17,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
 ?>
 
 <nav class="navbar navbar-expand navbar-expand-lg">
-  <img src="images/logotritranspa.png" alt="" style="width:50px;height:50px;"></img>
+<a href="index.php">   <img src="images/logotritranspa.png" alt="" style="width:50px;height:50px;"></img></a> 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>

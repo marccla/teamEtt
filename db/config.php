@@ -31,6 +31,7 @@ try {
         text TEXT not null,
         img_url varchar (2048),
         category_id INT NOT NULL,
+        author varchar (100) not null,
         FOREIGN KEY (category_id) REFERENCES categories (id)
     ) ENGINE = INNODB;
     

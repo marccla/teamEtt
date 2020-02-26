@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $param_text = trim($_POST["content"]);
         $param_img_url = trim($_POST["imgurl"]);
         $param_category_id = trim($_POST["category"]);
-        $param_author = trim($_POST["author"]);
+        $param_author = trim($_SESSION['username']);
 
         // Attempt to execute the prepared statement
         if ($stmt->execute()) {
@@ -54,12 +54,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <label>Länk till bild</label><input type="file" id="file" name="myFile">
                         <input type="text" id="imgurl" name="imgurl" placeholder="http://" class="form-control">
                     </div>
-                    <? require_once 'templates/get-users.php'; ?>
-                    <? require_once 'db/config.php'; ?>
                     <div class="form-group">
                         <label>Text</label>
                         <textarea required class="form-control" id="content" name="content" placeholder="Skriv något här med va..." id="eventDescription" rows="7"></textarea>
-                        <input class="d-none" type="text" name="author" value="<? echo $_SESSION['username']?>" required></input>
                     </div>
                     <div class="form-group">
                         <select class="custom-select" name="category">

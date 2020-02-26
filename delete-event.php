@@ -1,7 +1,7 @@
 <?
 require_once "db/config.php";
 if (isset($_GET['id'])) {
-    $sql = 'DELETE FROM events WHERE events.id = :id';
+    $sql = 'DELETE FROM signups WHERE event_id = :id; DELETE FROM events WHERE events.id = :id';
     try {
         if ($stmt = $conn->prepare($sql)) {
             $stmt->bindParam(":id", $param_id, PDO::PARAM_STR);
@@ -15,7 +15,7 @@ if (isset($_GET['id'])) {
             }
         }
     } catch (PDOException $e) {
-        echo "<script type='text/javascript'>alert('Du kan inte ta bort ett event med deltagare');window.location.href='index.php';</script>";
+        echo "<script type='text/javascript'>alert('Något gick knas');window.location.href='index.php';</script>";
     }
     // Close connection
     unset($conn);

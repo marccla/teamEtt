@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </div>
                     <div class="form-group">
                         <label>Länk till bild</label><input type="file" id="file" name="myFile">
-                        <input required type="text" id="imgurl" name="imgurl" placeholder="http://" class="form-control">
+                        <input type="text" id="imgurl" name="imgurl" placeholder="http://" class="form-control">
                     </div>
                     <div class="form-group">
                         <label>Text</label>

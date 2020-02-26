@@ -9,7 +9,7 @@ include('templates/nav.php');
     include('templates/events.php');
     include('templates/footer.php');
     include('templates/get-users.php');
-var_dump($users['username']);
+
 
 
     ?>

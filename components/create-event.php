@@ -56,10 +56,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <input required type="text" id="imgurl" name="imgurl" placeholder="http://" class="form-control">
                     </div>
                     <? require_once 'templates/get-users.php'; ?>
+                    <? require_once 'db/config.php'; ?>
                     <div class="form-group">
                         <label>Text</label>
                         <textarea required class="form-control" id="content" name="content" placeholder="Skriv något här med va..." id="eventDescription" rows="7"></textarea>
-                        <input class="d-no  " type="text" name="author" value="<? echo $_GET['username']?>" required></input>
+                        <input class="d-none" type="text" name="author" value="<? echo $_SESSION['username']?>" required></input>
                     </div>
                     <div class="form-group">
                         <select class="custom-select" name="category">

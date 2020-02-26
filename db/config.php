@@ -29,7 +29,7 @@ try {
         id INT AUTO_INCREMENT PRIMARY KEY,
         title varchar (100) not null,
         text TEXT not null,
-        img_url varchar (2048) not null,
+        img_url varchar (2048),
         category_id INT NOT NULL,
         FOREIGN KEY (category_id) REFERENCES categories (id)
     ) ENGINE = INNODB;

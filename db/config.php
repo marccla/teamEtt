@@ -9,7 +9,7 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
    
    
-    $sql = "CREATE DATABASE IF NOT EXISTS event_db2; 
+    $sql = "CREATE DATABASE IF NOT EXISTS event_db; 
     
     USE event_db2;
     
@@ -52,24 +52,27 @@ try {
         ('Hemligt');
     
     INSERT INTO
-        events (title, text, img_url, category_id)
+        events (title, text, img_url, author, category_id)
     values
         (
             'React 101',
             'Lära sig allt, alla är välkomna',
             'https://image.shutterstock.com/image-illustration/tv-color-test-pattern-card-600w-61115026.jpg',
+            'Gunnar',
             1
         ),
         (
             'Dricka',
             'Dricka allt, alla är välkomna',
             'https://image.shutterstock.com/image-illustration/tv-color-test-pattern-card-600w-61115026.jpg',
+            'Jesus',
             2
         ),
         (
             'Hemligheter 101',
             'Hemlighåll allt, alla är välkomna',
             'https://image.shutterstock.com/image-illustration/tv-color-test-pattern-card-600w-61115026.jpg',
+            'Någon hemlig',
             3
         );
     

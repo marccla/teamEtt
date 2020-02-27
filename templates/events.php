@@ -23,8 +23,8 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
               <p class="card-text"><? echo substr($event['text'], 0, 100) ?><? echo strlen($event['text']) > 100 ? '...' : '' ?></p>
               <p class="card-text"><? echo $event['author'] ?></p>
               <?php if ($loggedIn) : ?>
-                <a href="edit-event.php?id=<?php echo $event['id'] ?>" class="btn btn-primary" style="background-color: #B3997F;">Edit</a>
-                <a href="delete-event.php?id=<?php echo $event['id'] ?>" class="btn btn-secondary" style="width: 30% !important; height: 30% !imporant; background-color: #6DA0B3;">Delete</a>
+                <a href="edit-event.php?id=<?php echo $event['id'] ?>" class="btn btn-primary" style="background-color: #B3997F;">Redigera</a>
+                <a href="delete-event.php?id=<?php echo $event['id'] ?>" class="btn btn-secondary" style="width: 35% !important; height: 30% !imporant; background-color: #6DA0B3;">Ta bort</a>
               <?php endif; ?>
 
             </div>

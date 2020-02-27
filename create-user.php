@@ -21,7 +21,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
  
     // Validate username
     if(empty(trim($_POST["username"]))){
-        $username_err = "Please enter a username.";
+        $username_err = "Var vänlig och fyll i ett användarnamn.";
     } else{
         // Prepare a select statement
         $sql = "SELECT id FROM users WHERE username = :username";
@@ -36,12 +36,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             // Attempt to execute the prepared statement
             if($stmt->execute()){
                 if($stmt->rowCount() == 1){
-                    $username_err = "This username is already taken.";
+                    $username_err = "Detta användarnamn är redan taget.";
                 } else{
                     $username = trim($_POST["username"]);
                 }
             } else{
-                echo "Oops! Something went wrong. Please try again later.";
+                echo "Oops! Något gick fel. Var vänlig och försök igen senare.";
             }
 
             // Close statement
@@ -51,9 +51,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     
     // Validate password
     if(empty(trim($_POST["password"]))){
-        $password_err = "Please enter a password.";     
+        $password_err = "Var vänlig och fyll i ett lösenord.";     
     } elseif(strlen(trim($_POST["password"])) < 6){
-        $password_err = "Password must have atleast 6 characters.";
+        $password_err = "Lösenordet måste ha minst 6 bokstäver.";
     } else{
         $password = trim($_POST["password"]);
     }
@@ -88,7 +88,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 // Redirect to login page
                 header("location: login.php");
             } else{
-                echo "Something went wrong. Please try again later.";
+                echo "Något gick fel. Var vänlig och försök igen senare.";
             }
 
             // Close statement
@@ -124,8 +124,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <span class="help-block"><?php echo $confirm_password_err; ?></span>
             </div>
             <div class="form-group">
-                <input type="submit" class="btn btn-outline-primary" value="Submit">
-                <input type="reset" class="btn btn-outline-secondary" value="Reset">
+                <input type="submit" class="btn btn-outline-primary" value="Skicka">
+                <input type="reset" class="btn btn-outline-secondary" value="Återställ">
             </div>
             <p>Har du redan ett konto? <a href="login.php">Logga in här!</a>.</p>
         </form>

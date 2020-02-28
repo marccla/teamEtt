@@ -40,11 +40,11 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
       <?php if ($loggedIn) : ?>
         <a href="#" class="btn btn-outline-primary my-2 my-sm-0" id="sentMessage" data-toggle="modal" data-target="#largeModal">Nytt event</a>
         <a href="log-out.php">
-          <div class="btn btn-outline-primary my-2 my-sm-0">Sign out</div>
+          <div class="btn btn-outline-primary my-2 my-sm-0">Logga ut</div>
         </a>
       <?php else : ?>
         <a href="login.php">
-          <div class="btn btn-outline-primary my-2 my-sm-0">Login</div>
+          <div class="btn btn-outline-primary my-2 my-sm-0">Logga in</div>
         </a>
       <?php endif; ?>
     </form>

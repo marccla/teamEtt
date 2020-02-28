@@ -100,19 +100,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <div class="row">
         <div class="m-auto">
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-        <h2>Login</h2>
+        <h2>Logga in</h2>
             <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
-                <label>Username</label>
+                <label>Användarnamn</label>
                 <input type="text" name="username" class="form-control" value="<?php echo $username; ?>">
                 <span class="help-block"><?php echo $username_err; ?></span>
             </div>    
             <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
-                <label>Password</label>
+                <label>Lösenord</label>
                 <input type="password" name="password" class="form-control">
                 <span class="help-block"><?php echo $password_err; ?></span>
             </div>
             <div class="form-group">
-                <input type="submit" class="btn btn-outline-primary" value="Login">
+                <input type="submit" class="btn btn-outline-primary" value="Logga in">
             </div>
             <p>Har du inget konto? <a href="create-user.php">Skapa ett här!</a></p>
         </form>

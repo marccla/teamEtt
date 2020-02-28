@@ -21,3 +21,7 @@ nav {
 .event-img {
   max-width: 90vw;
 }
+
+.badge-primary {
+  background-color: #CFF2FF!important;  
+}

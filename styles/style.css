@@ -29,3 +29,8 @@ nav {
 .btn {
   font-size: 12px!important;
 }
+
+.footer {
+  background-color: #CFF2FF!important;
+  height: 50px;
+}

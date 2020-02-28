@@ -65,7 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </select>
                     </div>
                     <div class="form-group">
-                        <input type="submit" class="btn-block" id="testknapp" value="Skicka">
+                        <input type="submit" class="btn-block" value="Skicka">
                     </div>
                 </form>
             </div>

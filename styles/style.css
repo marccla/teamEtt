@@ -21,3 +21,16 @@ nav {
 .event-img {
   max-width: 90vw;
 }
+
+.badge-primary {
+  background-color: #CFF2FF!important;  
+}
+
+.btn {
+  font-size: 12px!important;
+}
+
+.footer {
+  background-color: #CFF2FF!important;
+  height: 50px;
+}

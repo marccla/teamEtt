@@ -8,13 +8,13 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
 ?>
 
 <div class="container">
-  <div class="row">
+  <div class="row mt-5">
     <?
     //Looping each row in table as its own "article"
     foreach ($events as $event) { ?>
-      <a href="single-post.php?id=<?php echo $event['id']; ?>">
+      <a class="m-auto" href="single-post.php?id=<?php echo $event['id']; ?>">
         <div class="col-lg-3 col-md-6 col-12">
-          <div class="card" style="width: 18rem;">
+          <div class="card mb-3" style="width: 18rem;">
             <?php if ($event['img_url']) : ?>
               <img src="<? echo $event['img_url'] ?>" class="card-img-top" alt="picture">
             <?php endif; ?>

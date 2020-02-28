@@ -11,11 +11,11 @@ if (isset($_GET['id'])) {
                 //Refresh page on successful insert
                 header("location: index.php");
             } else {
-                echo "Something went wrong. Please try again later.";
+                echo "Något gick fel. Snälla försök igen senare.";
             }
         }
     } catch (PDOException $e) {
-        echo "<script type='text/javascript'>alert('Något gick knas');window.location.href='index.php';</script>";
+        echo "<script type='text/javascript'>alert('Något gick fel');window.location.href='index.php';</script>";
     }
     // Close connection
     unset($conn);

@@ -4,7 +4,7 @@ include('templates/nav.php');
 
 require_once "db/config.php";
 
-
+// Fetch data to prefill values/text
 $sql = "SELECT events.id, events.title, events.text, events.img_url, author, categories.name FROM events JOIN categories on events.category_id = categories.id WHERE events.id = :id";
 $stmt = $conn->prepare($sql);
 $stmt->bindParam(":id", $param_id, PDO::PARAM_STR);
@@ -69,7 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
     <input class="d-none" type="text" name="id" value="<? echo $_GET['id'] ?>" required></input>
     <div class="form-group">
-        <input type="submit" class="btn-block" id="testknapp" value="Skicka">
+        <input type="submit" class="btn-block" value="Skicka">
     </div>
 </form>
 
